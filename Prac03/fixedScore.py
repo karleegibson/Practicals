@@ -1,9 +1,9 @@
 def main():
     score = float(input("Enter score: "))
-    valid_score_message = check_valid_score(score)
+    valid_score_message = calc_result(score)
     print(valid_score_message)
 
-def check_valid_score(score):
+def calc_result(score):
     if score < 0 or score > 100:
         message = "Invalid score"
     elif 50 < score <= 90:

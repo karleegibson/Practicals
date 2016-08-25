@@ -4,9 +4,22 @@ Pseudocode for temperature conversion
 """
 __author__ = 'Lindsay Ward'
 
-MENU = "C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ (for quit)"
-print(MENU)
-choice = input(">>> ").upper()
+def main():
+    MENU = "C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ (for quit)"
+    print(MENU)
+    choice = input(">>> ").upper()
+    while choice != "Q":
+        if choice == "C":
+        celsius_to_fahrenheit = convert_to_fahrenheit()
+        print("Result: {:.2f} F".format(celsius_to_fahrenheit))
+    elif choice == "F":
+        fahrenheit_to_celsius = convert_to_celsius()
+        print("Result: {:.2f} C".format(fahrenheit_to_celsius))
+    else:
+        print("Invalid option")
+    print(MENU)
+    choice = input(">>> ").upper()
+print("Thank you.")
 
 
 def convert_to_fahrenheit():
@@ -21,15 +34,3 @@ def convert_to_celsius():
     return celsius
 
 
-while choice != "Q":
-    if choice == "C":
-        celsius_to_fahrenheit = convert_to_fahrenheit()
-        print("Result: {:.2f} F".format(celsius_to_fahrenheit))
-    elif choice == "F":
-        fahrenheit_to_celsius = convert_to_celsius()
-        print("Result: {:.2f} C".format(fahrenheit_to_celsius))
-    else:
-        print("Invalid option")
-    print(MENU)
-    choice = input(">>> ").upper()
-print("Thank you.")
