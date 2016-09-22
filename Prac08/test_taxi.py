@@ -1,5 +1,6 @@
 from Prac08.taxi import Taxi
 from Prac08.taxi import UnreliableCar
+from Prac08.taxi import SilverServiceTaxi
 
 
 def main():
@@ -15,6 +16,10 @@ def main():
     honda = UnreliableCar("Honda", 100, 55.59)
     honda.drive(40)
     print(honda)
+
+    prius2 = SilverServiceTaxi("Prius 2", 200, 2)
+    prius2.drive(10)
+    print(prius2)
 
 
 main()
