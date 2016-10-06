@@ -13,13 +13,14 @@ def main():
     while choice != "q":
         if choice == "c":
             print("Taxis available:")
-            for taxi in taxis:
-                print(taxi)
-            taxi_choice = input("Choice taxi: ")
+            for i, taxi in enumerate(taxis):
+                print(i, taxi)
+            taxi_choice = int(input("Choice taxi: "))
+            taxi_chosen = taxis[taxi_choice]
 
         choice = input(">>> ")
         if choice == "d":
             distance = int(input("Drive how far? "))
-            taxi.drive(distance)
+            taxi_chosen.drive(distance)
 
 main()
