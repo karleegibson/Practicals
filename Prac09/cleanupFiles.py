@@ -24,10 +24,18 @@ for filename in os.listdir('.'):
         print(new_name)
 
         # Option 1: rename file to new name - in place
-        # os.rename(filename, new_name)
+        os.rename(filename, new_name)
+
 
         # Option 2: move file to new place, with new name
         # shutil.move(filename, 'temp/' + new_name)
+
+names = []
+if
+
+print(names)
+
+
 
 
 # Processing subdirectories using os.walk()
